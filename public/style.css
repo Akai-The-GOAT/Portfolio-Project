@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    background-color: #E2E2B6;
+}
+
+.navbar {
+    overflow: hidden;
+    text-align: right;
+    background-color: #021526;
+    width: 100%;
+    position: fixed; /* Keeps the navbar at the top even when scrolling */
+    top: 0;          /* Ensures it aligns with the very top of the page */
+    left: 0;         /* Aligns it to the left edge */
+    z-index: 1000;   /* Ensures it stays above other elements */
+    margin: 0;       /* Removes any default margin */
+    padding: 10px;      /* Removes any default padding */
+    box-sizing: border-box;
+}
+
+.logo {
+    float: left;          /* Align the logo text to the left */
+    font-size: 1.5em;          /* Adjust font size for visibility */
+    color: white;              /* Add a color for the text */
+    text-decoration: none;     /* Remove underline from the logo link */
+    padding: 10px;       /* Adds some spacing from the edge */
+}
+
+.navbar a {
+    display: inline-block;
+    background-color: #021526;
+    color: #E2E2B6;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a.active {
+    border-bottom: 3px solid #E2E2B6;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    color: #E2E2B6;
+    background-color: #03346E;
+    border-radius: 5px;
+}
+
+.home {
+    display: flex;              /* Enables flexbox for inline layout */
+    align-items: center;        /* Centers the items vertically */
+    justify-content: space-between; /* Adds space between the image and the content */
+    margin-top: 100px;              /* Adds some padding around the section */
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 300px;               /* Set the width of the div */
+    height: 300px;              /* Set the height of the div */
+    overflow: hidden;           /* Ensures the image stays within the div's bounds */
+    border-radius: 10%;         /* Makes the profile-picture div circular */
+    margin-left: 90px;
+    border: 5px solid #021526;
+}
+
+.profile-picture img {
+    width: 100%;                /* Make the image scale to fill the width */
+    height: 100%;               /* Make the image scale to fill the height */
+    object-fit: cover;          /* Ensures the image fills the div and crops excess parts */
+}
+
+.home-content {
+    flex: 2;                    /* Allows more space for the content */
+    padding: 20px;              /* Adds some spacing around the text */
+    margin-right: 90px;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+}
+
+.home-content h2 {
+    font-size: 2rem;
+}
+
+.description {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.name-color {
+    color: #E2E2B6;
+    background-color: #021526;
+    border: 5px solid #021526;
+    border-radius: 5px;
+}
+
+.role-color {
+    display: inline-block;
+    opacity: 1;               /* Start fully visible */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    color: transparent;
+    /* Add a stroke around the text */
+    -webkit-text-stroke: .5px #021526; /* Adjust width and color as needed */
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 2rem;
+    background-color: #021526;
+    border: 0.2rem solid #021526;
+    border-radius: 5px;
+    margin: 0 .2rem 10px 0;
+    transition: 0.3 ease;
+    text-decoration: none;
+}
+
+.fab {    
+    color: #E2E2B6;
+    padding: 0;
+    margin: 0;
+}
+
+.Contact-Me {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.4rem;
+    height: 2rem;
+    background-color: #021526;
+    border: 0.2rem solid #021526;
+    border-radius: 5px;
+    margin: 0 .2rem 1rem 0;
+}
+
+.Contact-Me>a{
+    text-decoration: none;
+    color: #E2E2B6;
+}
+
+.Contact-Me:hover, .social-icons>a:hover {
+    color: #E2E2B6;
+    background-color: #03346E;
+}
+
+.home-content h1, .home-content p{
+    padding: 5px 10px 10px 0px;
+}
+
+.featured-work {
+    overflow: hidden;
+    display: block;              /* Ensures the section spans the full width */
+    background-color: #021526;   /* Sets a background color */
+    width: 100%;                 /* Makes the section fill the width of the page */
+    height: auto;
+    color: #E2E2B6;                /* Ensures text is readable on the dark background */
+    text-align: center;          /* Centers the text content */
+    margin: 0;
+}
+
+
+.featured-work h2 {
+    padding: 20px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.work-item img {
+    width: 100%;
+    height: auto;
+    z-index: 50;
+    display: block;
+}
+
+.work-item {
+    margin-bottom: 20px;
+    align-items: center;  /* Centers items inside */
+    justify-content: center; /* Centers vertically */
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.work-item h3 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 20%;
+    color: #021526;
+    background-color: #E2E2B6;
+    z-index: 51;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 20px;
+    text-transform: capitalize;
+}
+
+.carousel-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+    z-index: 10; /* Ensures buttons stay above the carousel */
+    opacity: 1; /* Keep buttons visible */
+}
+
+.prev-btn {
+    left: 10px; /* Ensure it's not hidden */
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.skills {
+    overflow: hidden;
+    display: block;                 /* Ensures the section spans the full width */
+    background-color: #E2E2B6;   /* Sets a background color */
+    width: 100%;                    /* Makes the section fill the width of the page */
+    height: auto;
+    color: #021526;               /* Ensures text is readable on the dark background */
+    text-align: center;             /* Centers the text content */
+    margin: 0;
+}
+
+.skills h2 {
+    padding: 20px 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.skills-parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 0 20px 20px 20px;
+    gap: 20px;
+
+}
+
+.skills-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures everything is centered */
+    text-align: center;
+}
+
+.skills-child img {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Adjust this to match your logo size */
+    height: 80px; /* Ensure width & height are equal for a perfect circle */
+    padding: 15px; /* Adds space inside the circle */
+    background-color: whitesmoke;
+    border-radius: 50%; /* Ensures a perfect circle */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+    object-fit: contain; /* Ensures the whole icon fits */
+}
+
+.skills-child h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #021526;
+}
+
+.skills-child p {
+    color: #021526;
+    font-size: small;
+}
+
+.skills-child>p>span {
+    font-weight: bolder;
+    border-radius: 20px;
+    border: solid whitesmoke ;
+    background-color: whitesmoke;
+    padding: 2px 4px 2px 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
